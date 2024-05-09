@@ -4,6 +4,5 @@
   </h4>
   {{ $imagePath := (printf "%s%s%s" "**/" .Slug "/badge.svg") }}
   {{ $image := .Resources.GetMatch "badge" }}
-  {{ fmt.Warnf $imagePath }}
   <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="post-item-title">
 </article>
