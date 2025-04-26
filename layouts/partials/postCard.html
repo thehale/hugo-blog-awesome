@@ -1,8 +1,8 @@
-<article class="post-item">
-  <h4 class="post-item-title">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h4>
-  {{ $imagePath := (printf "%s%s%s" "**/" .Slug "/badge.svg") }}
-  {{ $image := .Resources.GetMatch "badge" }}
-  <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="post-item-title">
+<article>
+  <a href="{{ .RelPermalink }}" class="post-item">
+    <h4 class="post-item-title">{{ .Title }}</h4>
+    {{ $imagePath := (printf "%s%s%s" "**/" .Slug "/badge.svg") }}
+    {{ $image := .Resources.GetMatch "badge" }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="post-item-title">
+  </a>
 </article>
