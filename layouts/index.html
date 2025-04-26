@@ -21,7 +21,7 @@
             <h3 class="posts-item-note" aria-label="Recent Posts">{{ T "home.recent_posts" }}</h3>
             {{/* Show last 5 posts in reverse date order */}}
             {{ $pagesToShow := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
-            {{ $posts := $pagesToShow.ByDate.Reverse }}
+            {{ $posts := $pagesToShow.ByTitle }}
             {{ range $posts }}
             {{ partial "postCard" . }}
             {{ end }}
